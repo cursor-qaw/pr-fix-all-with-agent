@@ -25,10 +25,22 @@ function App() {
     setTodos((prev) => prev.filter((t) => t.id !== id));
   }
 
+  function handleGreetingClick() {
+    console.log("How's it hanging?");
+  }
+
   return (
     <div className="app">
       <main className="todo-panel">
         <h1 className="todo-title">To-do</h1>
+
+        <button
+          type="button"
+          className="greeting-button"
+          onClick={handleGreetingClick}
+        >
+          How&apos;s it hanging?
+        </button>
 
         <form className="todo-form" onSubmit={addTodo}>
           <label htmlFor="new-todo" className="visually-hidden">
