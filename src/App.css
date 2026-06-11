@@ -1,8 +1,8 @@
 .app {
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 2.5rem 1rem;
   background: #f0f2f5;
   color: #1a1a1a;
