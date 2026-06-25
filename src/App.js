@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import { header } from './starter';
 
 let nextId = 1;
 
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1>{header.value}</h1>
       <main className="todo-panel">
         <h1 className="todo-title">To-do</h1>
 
