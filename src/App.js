@@ -28,57 +28,59 @@ function App() {
 
   return (
     <div className="app">
-      <h1>{header.value}</h1>
-      <main className="todo-panel">
-        <h1 className="todo-title">To-do</h1>
+      <div className="app-content">
+        <h1 className="app-welcome">{header.value}</h1>
+        <main className="todo-panel">
+          <h1 className="todo-title">To-do</h1>
 
-        <form className="todo-form" onSubmit={addTodo}>
-          <label htmlFor="new-todo" className="visually-hidden">
-            New task
-          </label>
-          <input
-            id="new-todo"
-            type="text"
-            className="todo-input"
-            placeholder="Add a task…"
-            value={draft}
-            onChange={(e) => setDraft(e.target.value)}
-            autoComplete="off"
-          />
-          <button type="submit" className="todo-add">
-            Add
-          </button>
-        </form>
+          <form className="todo-form" onSubmit={addTodo}>
+            <label htmlFor="new-todo" className="visually-hidden">
+              New task
+            </label>
+            <input
+              id="new-todo"
+              type="text"
+              className="todo-input"
+              placeholder="Add a task…"
+              value={draft}
+              onChange={(e) => setDraft(e.target.value)}
+              autoComplete="off"
+            />
+            <button type="submit" className="todo-add">
+              Add
+            </button>
+          </form>
 
-        {todos.length === 0 ? (
-          <p className="todo-empty">No tasks yet. Add one above.</p>
-        ) : (
-          <ul className="todo-list">
-            {todos.map((t) => (
-              <li key={t.id} className="todo-item">
-                <label className="todo-row">
-                  <input
-                    type="checkbox"
-                    checked={t.done}
-                    onChange={() => toggleTodo(t.id)}
-                  />
-                  <span className={t.done ? 'todo-text done' : 'todo-text'}>
-                    {t.text}
-                  </span>
-                </label>
-                <button
-                  type="button"
-                  className="todo-delete"
-                  onClick={() => removeTodo(t.id)}
-                  aria-label={`Delete: ${t.text}`}
-                >
-                  Delete
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </main>
+          {todos.length === 0 ? (
+            <p className="todo-empty">No tasks yet. Add one above.</p>
+          ) : (
+            <ul className="todo-list">
+              {todos.map((t) => (
+                <li key={t.id} className="todo-item">
+                  <label className="todo-row">
+                    <input
+                      type="checkbox"
+                      checked={t.done}
+                      onChange={() => toggleTodo(t.id)}
+                    />
+                    <span className={t.done ? 'todo-text done' : 'todo-text'}>
+                      {t.text}
+                    </span>
+                  </label>
+                  <button
+                    type="button"
+                    className="todo-delete"
+                    onClick={() => removeTodo(t.id)}
+                    aria-label={`Delete: ${t.text}`}
+                  >
+                    Delete
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </main>
+      </div>
     </div>
   );
 }
