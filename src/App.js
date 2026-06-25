@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import { header } from './starter';
 
 let nextId = 1;
 
@@ -17,7 +18,7 @@ function App() {
 
   function toggleTodo(id) {
     setTodos((prev) =>
-      prev.map((t) => (t.id === id ? { ...t, done: !t.done } : t))
+      prev.map((t) => (t.id === id ? { ...t, done: t.done } : t))
     );
   }
 
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1 className="app-header">{header.value}</h1>
       <main className="todo-panel">
         <h1 className="todo-title">To-do</h1>
 
