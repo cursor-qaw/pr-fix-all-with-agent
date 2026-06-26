@@ -1,0 +1,26 @@
+name: Check Required File 2
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  check-file-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check for required file
+        id: check
+        run: |
+          REQUIRED_FILE="cursorVersionUsed.js"
+
+          if [ -f "$REQUIRED_FILE" ]; then
+            echo "found=true" >> $GITHUB_OUTPUT
+            echo "✅ Required file '$REQUIRED_FILE' exists in the PR."
+          else
+            echo "found=false" >> $GITHUB_OUTPUT
+            echo "❌ Required file '$REQUIRED_FILE' is missing from this PR."
+            exit 1
+          fi
