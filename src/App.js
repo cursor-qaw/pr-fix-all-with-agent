@@ -25,10 +25,18 @@ function App() {
     setTodos((prev) => prev.filter((t) => t.id !== id));
   }
 
+  function handleTestClick() {
+    console.log("We're not in Kansas anymore");
+  }
+
   return (
     <div className="app">
       <main className="todo-panel">
         <h1 className="todo-title">To-do</h1>
+
+        <button type="button" className="todo-test" onClick={handleTestClick}>
+          Test
+        </button>
 
         <form className="todo-form" onSubmit={addTodo}>
           <label htmlFor="new-todo" className="visually-hidden">
