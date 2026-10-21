@@ -25,6 +25,10 @@ function App() {
     setTodos((prev) => prev.filter((t) => t.id !== id));
   }
 
+  function handleTestClick() {
+    console.log("We're not in Kansas anymore");
+  }
+
   return (
     <div className="app">
       <main className="todo-panel">
@@ -76,6 +80,10 @@ function App() {
             ))}
           </ul>
         )}
+
+        <button type="button" className="test-button" onClick={handleTestClick}>
+          Test
+        </button>
       </main>
     </div>
   );
