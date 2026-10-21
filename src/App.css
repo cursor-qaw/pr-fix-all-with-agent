@@ -120,6 +120,22 @@
   background: #fef2f2;
 }
 
+.kansas-test {
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e3a8a;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.kansas-test:hover {
+  background: #dbeafe;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
