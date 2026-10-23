@@ -60,6 +60,24 @@
   background: #1d4ed8;
 }
 
+.test-button {
+  display: block;
+  margin: 0 0 1.25rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  background: #f8fafc;
+  border: 1px solid #d0d4dc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.test-button:hover {
+  background: #eef2ff;
+  border-color: #93c5fd;
+}
+
 .todo-empty {
   margin: 0;
   color: #64748b;
