@@ -25,6 +25,10 @@ function App() {
     setTodos((prev) => prev.filter((t) => t.id !== id));
   }
 
+  function logKansasMessage() {
+    console.log("We're not in Kansas anymore");
+  }
+
   return (
     <div className="app">
       <main className="todo-panel">
@@ -76,6 +80,14 @@ function App() {
             ))}
           </ul>
         )}
+
+        <button
+          type="button"
+          className="kansas-test"
+          onClick={logKansasMessage}
+        >
+          Test
+        </button>
       </main>
     </div>
   );
