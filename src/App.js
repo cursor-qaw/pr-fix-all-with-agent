@@ -76,6 +76,16 @@ function App() {
             ))}
           </ul>
         )}
+
+        <button
+          type="button"
+          className="todo-test"
+          onClick={() => {
+            console.log("We're not in Kansas anymore");
+          }}
+        >
+          Test
+        </button>
       </main>
     </div>
   );
