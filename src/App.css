@@ -24,6 +24,23 @@
   letter-spacing: -0.02em;
 }
 
+.kansas-test {
+  margin: 0 0 1.25rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  background: #fff;
+  border: 1px solid #d0d4dc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.kansas-test:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
 .todo-form {
   display: flex;
   gap: 0.5rem;
