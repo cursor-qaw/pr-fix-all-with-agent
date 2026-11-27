@@ -1,2 +1,2 @@
 console.log("hello world");
-const cursorVersionUsed = "desktop";
+const cursorVersionUsed = "not reported";
